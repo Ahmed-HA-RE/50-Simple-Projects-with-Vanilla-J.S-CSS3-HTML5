@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.bg {
+  background: black url('./loading-image.jpg') no-repeat center center/cover;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  filter: blur(0px);
+}
+
+.loading-text {
+  color: white;
+  font-size: 2.2rem;
+}
+
+/* My Task */
+.features {
+  text-align: center;
+}
+
+.container {
+  background-color: #333;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: aqua;
+  height: 10px;
+  border: none;
+  border-radius: 30%;
+  transition: all 0, 4s ease-in-out;
+}
+
+.progress-text {
+  color: black;
+  font-size: 18px;
+}

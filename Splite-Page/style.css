@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --left-bg-color: rgba(87, 84, 236, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --left-hover-btn-color: rgb(87, 84, 236);
+  --right-hover-btn-color: rgb(28, 122, 28);
+  --preferred-width: 75%;
+  --other-width: 38%;
+}
+
+body {
+  background-color: #333;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+.split-left {
+  left: 0;
+  top: 0;
+  background-image: url('./ps.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split h2 {
+  position: absolute;
+  font-size: 4rem;
+  color: #fff;
+  top: 20%;
+  left: 20%;
+  transform: translateY(50%);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.split-left::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: var(--left-bg-color);
+}
+
+.split-right {
+  right: 0;
+  top: 0;
+  background-image: url('./xbox.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split-right::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: var(--right-bg-color);
+}
+
+.buy-btn {
+  position: absolute;
+  color: #fff;
+  top: 40%;
+  left: 28%;
+  padding: 1.2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  border: 2.5px solid #fff;
+  transform: translateY(50%);
+  transition: all 0.2s ease;
+}
+
+.split-left .buy-btn:hover {
+  background-color: var(--left-hover-btn-color);
+  border-color: var(--left-hover-btn-color);
+}
+.split-right .buy-btn:hover {
+  background-color: var(--right-hover-btn-color);
+  border-color: var(--right-hover-btn-color);
+}
+
+.container.left-preferred .split-left {
+  width: var(--preferred-width);
+}
+
+.container.left-preferred .split-right {
+  width: var(--other-width);
+}
+.container.right-preferred .split-right {
+  width: var(--preferred-width);
+}
+
+.container.right-preferred .split-left {
+  width: var(--other-width);
+}
+
+.container.right-preferred,
+.container.left-preferred,
+.split-left,
+.split-right {
+  transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 800px) {
+  .split h2 {
+    font-size: 2rem;
+    top: 27%;
+  }
+
+  .buy-btn {
+    padding: 1rem 1.7rem;
+  }
+}

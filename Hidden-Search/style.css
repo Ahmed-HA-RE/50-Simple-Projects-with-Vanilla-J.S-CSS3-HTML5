@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 209, 1) 0%,
+    rgba(255, 224, 126, 1) 16.667%,
+    rgba(255, 83, 30, 1) 33.333%,
+    rgba(115, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 1) 66.667%,
+    rgba(0, 45, 47, 1) 83.333%,
+    rgba(11, 188, 145, 1) 100%
+  );
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.search {
+  position: relative;
+}
+
+.search-field {
+  font-size: 18px;
+  padding: 0rem 0.7rem;
+  font-family: inherit;
+  width: 60px;
+  height: 50px;
+  background-color: #b5dda4;
+  border: none;
+  transition: all 0.4s ease-in-out;
+  color: white;
+}
+
+.search-field::placeholder {
+  color: white;
+}
+
+.search-field:focus {
+  outline: none;
+}
+
+.search-btn {
+  font-size: 24px;
+  border: none;
+  background-color: #b5dda4;
+  color: white;
+  padding: 0 0.7rem;
+  width: 60px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.4s ease-in-out;
+}
+
+.search-btn:active {
+  transform: scale(0.9);
+}
+
+.search.active .search-field {
+  width: 300px;
+}
+.search.active .search-btn {
+  transform: translateX(300px);
+  left: -8px;
+}

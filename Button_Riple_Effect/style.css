@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #f29492, #114357);
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.riple-btn {
+  background: linear-gradient(to right, #a044ff, #6a3093);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1.3rem 1.9rem;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.riple-btn:active {
+  transform: scale(0.95);
+}
+
+.riple-btn .circle {
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: riple-effect 0.5s ease-in-out;
+}
+
+@keyframes riple-effect {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  max-width: 900px;
+  margin: 25px auto;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.loving-post-img {
+  background: url('./car.jpg') no-repeat center center/cover;
+  height: 440px;
+  width: 300px;
+  margin: 14px auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  position: relative;
+}
+
+.loving-post-img .fa-heart {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  animation: grow 0.7s linear;
+}
+
+@keyframes grow {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(7);
+    opacity: 0;
+  }
+}

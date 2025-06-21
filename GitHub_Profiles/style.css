@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #2a2a72;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-user {
+  width: 100%;
+  max-width: 700px;
+}
+
+.form-user input {
+  width: 100%;
+  background-color: #4c2885;
+  color: #bbb;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 10px;
+  margin: 0 0 2rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-user input::placeholder {
+  color: #bbb;
+}
+
+.form-user input:focus {
+  outline: none;
+}
+
+.main {
+  padding: 1rem;
+  width: 100%;
+}
+
+.card {
+  background-color: #4c2885;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.card .profile-img {
+  height: 150px;
+  width: 150px;
+  border: 10px solid #2a2a72;
+  border-radius: 50%;
+}
+
+.card-info .description {
+  margin: 16px 0 20px;
+  /* max-width: 600px; */
+}
+
+.card-info .list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 400px;
+  margin-bottom: 1.4rem;
+}
+
+.card-info .list .list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  strong {
+    font-size: 0.9rem;
+  }
+}
+
+.card-info .links-repo {
+  text-align: center;
+}
+
+.card-info .links-repo .repo {
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  background-color: #2a2a72;
+  font-size: 12px;
+  margin: 10px 5px;
+  display: inline-block;
+}
+
+.error-msg {
+  padding: 3rem;
+  background-color: #4c2885;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .form-user {
+    max-width: 400px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

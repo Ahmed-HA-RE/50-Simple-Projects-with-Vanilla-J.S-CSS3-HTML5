@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Mono+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial;
+}
+
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 35%;
+  transition: all 0.4s ease-in-out;
+}
+
+.left-slider > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  color: #fff;
+}
+
+.left-slider h1 {
+  font-size: 40px;
+  font-weight: lighter;
+  margin: -20px 0 12px;
+}
+
+.right-slider {
+  position: absolute;
+  left: 35%;
+  top: 0;
+  width: 65%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.right-slider > div {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.action-slider-buttons .toggle {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  padding: 0.95rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: #aaa;
+  border: none;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.action-slider-buttons .toggle:hover {
+  color: #333;
+}
+.action-slider-buttons .toggle-down {
+  transform: translateX(-100%);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.action-slider-buttons .toggle-up {
+  transform: translateY(-100%);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}

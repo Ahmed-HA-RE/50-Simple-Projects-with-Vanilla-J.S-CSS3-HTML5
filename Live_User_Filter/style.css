@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  background-color: #3e57db;
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.header small {
+  display: inline-block;
+  opacity: 0.8;
+  margin: 5px 0 20px;
+}
+
+.header input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  width: 100%;
+  border-radius: 50px;
+  padding: 10px 15px;
+  font-size: 15px;
+}
+
+.header input:focus {
+  outline: none;
+}
+
+.user-results {
+  background-color: #fff;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.user-results li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 20px;
+}
+
+.user-results li img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.user-results .user-info h4 {
+  margin-bottom: 5px;
+}
+
+.user-results li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+
+.user-results li.hide {
+  display: none;
+}

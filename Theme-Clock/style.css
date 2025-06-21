@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #101010;
+  --secondary-color: #fff;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+body {
+  transition: all 0.5s ease-in;
+}
+
+body.dark {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.toggle {
+  position: absolute;
+  top: 100px;
+  padding: 0.55rem 0.8rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: background-color 0.5s ease-in, color 0.5s ease-in;
+}
+.toggle:active {
+  transform: scale(0.95);
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.needle {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in;
+}
+
+.needle.hours {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle.minutes {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+
+.needle.seconds {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: #e74c3c;
+}
+
+body.dark .needle.hours,
+body.dark .needle.minutes {
+  background-color: var(--secondary-color);
+}
+
+.center-point {
+  position: absolute;
+  background-color: #e74c3c;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-point::before {
+  content: '';
+  position: absolute;
+  background-color: var(--primary-color);
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body.dark .center-point::before {
+  background-color: var(--secondary-color);
+}
+
+.time {
+  font-size: 3.75rem;
+}
+
+.date {
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.date span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  transition: all 0.5s ease-in;
+}
+
+body.dark .date span {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
