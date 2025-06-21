@@ -11,12 +11,6 @@ This repository contains a collection of **46 small and practical projects** bui
 
 ---
 
-### 🔗 Live Demo
-
-[View the full project collection live on GitHub Pages](https://your-username.github.io/your-repo-name/)
-
----
-
 ### 📁 Folder Structure
 
 Each project is inside its own folder, named descriptively. Just open any folder and launch `index.html` in your browser to try it out.
