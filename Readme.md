@@ -1,4 +1,4 @@
-# 🧩 46 Mini Projects with HTML5, CSS3 & Vanilla JavaScript
+# 🧩 47 Mini Projects with HTML5, CSS3 & Vanilla JavaScript
 
 This repository contains a collection of **46 small and practical projects** built using only **HTML5**, **CSS3**, and **Vanilla JavaScript**. Each project focuses on a specific concept or feature of front-end development — ideal for strengthening core skills, building muscle memory, and learning by doing.
 
